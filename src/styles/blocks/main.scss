@@ -1,0 +1,57 @@
+.main {
+  flex: 1;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.controls__control {
+  font-size: 40px;
+  background-color: #f5f5f5;
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+  text-transform: uppercase;
+  border: 1px solid black;
+  outline: none;
+
+  &:hover {
+    box-shadow: rgba(80, 80, 80, 0.78) 0 0 5px 4px;
+  }
+}
+
+.controls__control--stop {
+  display: none;
+
+  &:hover {
+    opacity: .7;
+  }
+}
+
+.animation-pulse {
+  animation: pulse-animation 3s infinite;
+}
+
+@keyframes pulse-animation {
+  0% {
+    box-shadow: 0 0 0 0 rgba(255, 57, 77, 0.5);
+  }
+  33% {
+    box-shadow:
+      0 0 0 40px rgba(255, 57, 77, 1),
+      0 0 0 40px rgba(255, 251, 41, 0.5);
+  }
+  66% {
+    box-shadow:
+      0 0 0 40px rgba(255, 57, 77, 1),
+      0 0 0 80px rgba(255, 251, 41, 1),
+      0 0 0 80px rgba(8, 255, 8, 0.5);
+  }
+  100% {
+    box-shadow:
+      0 0 0 40px rgba(255, 57, 77, 1),
+      0 0 0 80px rgba(255, 251, 41, 1),
+      0 0 0 120px rgba(8, 255, 8, 1);
+  }
+}
